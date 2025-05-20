@@ -1,5 +1,5 @@
 /**
-* Template Name: NiceSchool
+* Template Name: Best ED Homeschooling
 * Template URL: https://bootstrapmade.com/nice-school-bootstrap-education-template/
 * Updated: May 10 2025 with Bootstrap v5.3.6
 * Author: BootstrapMade.com
