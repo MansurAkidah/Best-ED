@@ -143,59 +143,79 @@
       <div class="container form-container-overlap">
         <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
           <div class="col-lg-10">
+            
             <div class="contact-form-wrapper">
               <h2 class="text-center mb-4">Get in Touch</h2>
-
-              <form action="forms/contact.php" method="post" class="php-email-form">
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <div class="input-with-icon">
-                        <i class="bi bi-person"></i>
-                        <input type="text" class="form-control" name="name" placeholder="First Name" required="">
+              <form data-bind="submit: submitForm" class="php-email-form">
+                  <div class="row g-3">
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <div class="input-with-icon">
+                                  <i class="bi bi-person"></i>
+                                  <input type="text" 
+                                         class="form-control" 
+                                         data-bind="value: formData.name, css: { 'field-error': errors.name }"
+                                         placeholder="First Name">
+                              </div>
+                              <div class="validation-error" data-bind="text: errors.name, visible: errors.name"></div>
+                          </div>
                       </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <div class="input-with-icon">
-                        <i class="bi bi-envelope"></i>
-                        <input type="email" class="form-control" name="email" placeholder="Email Address" required="">
+                      
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <div class="input-with-icon">
+                                  <i class="bi bi-envelope"></i>
+                                  <input type="email" 
+                                         class="form-control" 
+                                         data-bind="value: formData.email, css: { 'field-error': errors.email }"
+                                         placeholder="Email Address">
+                              </div>
+                              <div class="validation-error" data-bind="text: errors.email, visible: errors.email"></div>
+                          </div>
                       </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <div class="input-with-icon">
-                        <i class="bi bi-text-left"></i>
-                        <input type="text" class="form-control" name="sbject" placeholder="Subject" required="">
+                      
+                      <div class="col-md-12">
+                          <div class="form-group">
+                              <div class="input-with-icon">
+                                  <i class="bi bi-text-left"></i>
+                                  <input type="text" 
+                                         class="form-control" 
+                                         data-bind="value: formData.subject, css: { 'field-error': errors.subject }"
+                                         placeholder="Subject">
+                              </div>
+                              <div class="validation-error" data-bind="text: errors.subject, visible: errors.subject"></div>
+                          </div>
                       </div>
-                    </div>
-                  </div>
-
-                  <div class="col-12">
-                    <div class="form-group">
-                      <div class="input-with-icon">
-                        <i class="bi bi-chat-dots message-icon"></i>
-                        <textarea class="form-control" name="message" placeholder="Write Message..." style="height: 180px" required=""></textarea>
+                      
+                      <div class="col-12">
+                          <div class="form-group">
+                              <div class="input-with-icon">
+                                  <i class="bi bi-chat-dots message-icon"></i>
+                                  <textarea class="form-control" 
+                                            data-bind="value: formData.message, css: { 'field-error': errors.message }"
+                                            placeholder="Write Message..." 
+                                            style="height: 180px"></textarea>
+                              </div>
+                              <div class="validation-error" data-bind="text: errors.message, visible: errors.message"></div>
+                          </div>
                       </div>
-                    </div>
+                      
+                      <div class="col-12">
+                          <div class="loading" data-bind="visible: isLoading">Sending message...</div>
+                          <div class="error-message" data-bind="visible: showError, text: errorMessage"></div>
+                          <div class="sent-message" data-bind="visible: showSuccess">Your message has been sent. Thank you!</div>
+                      </div>
+                      
+                      <div class="col-12 text-center">
+                          <button type="submit" 
+                                  class="btn btn-primary btn-submit" 
+                                  data-bind="enable: !isLoading(), text: isLoading() ? 'Sending...' : 'SEND MESSAGE'">
+                          </button>
+                      </div>
                   </div>
-
-                  <div class="col-12">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                  </div>
-
-                  <div class="col-12 text-center">
-                    <button type="submit" class="btn btn-primary btn-submit">SEND MESSAGE</button>
-                  </div>
-                </div>
               </form>
-            </div>
+          </div>
+
           </div>
         </div>
 
@@ -267,7 +287,10 @@
 
   <!-- Preloader -->
   <div id="preloader"></div>
-
+<!-- EmailJS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="assets/vendor/php-email-form/send-email.js"></script>
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>

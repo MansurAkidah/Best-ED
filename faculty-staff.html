@@ -87,9 +87,15 @@
             <div class="search-container" data-aos="fade-up" data-aos-delay="200">
               <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search tutors by name or subject...">
-                <button class="btn search-btn" type="button"><i class="bi bi-search"></i></button>
+                <button class="btn search-btn" type="button" onclick="showSearchMessage()"><i class="bi bi-search"></i></button>
               </div>
-              <div class="filters mt-3">
+              <div id="searchMessage" class="text-danger mt-2" style="display: none;">The search functionality is currently under development. Please check back later.</div>
+              <script>
+                function showSearchMessage() {
+                  document.getElementById('searchMessage').style.display = 'block';
+                }
+              </script>
+              <!-- <div class="filters mt-3">
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="checkbox" id="tutorFilter" checked="">
                   <label class="form-check-label" for="tutorFilter">Tutors</label>
@@ -102,28 +108,41 @@
                   <input class="form-check-input" type="checkbox" id="adminFilter" checked="">
                   <label class="form-check-label" for="adminFilter">Administration</label>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
-
         <div class="row">
           <div class="col-lg-3" data-aos="fade-up" data-aos-delay="300">
             <div class="departments-nav">
               <h4 class="departments-title">Subjects</h4>
               <ul class="nav nav-tabs flex-column">
-                
                 <li class="nav-item">
-                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#faculty--staff-tab-1">French</button>
+                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#faculty--staff-tab-1">English</button>
                 </li>
                 <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#faculty--staff-tab-2">ICT</button>
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#faculty--staff-tab-2">Mathematics</button>
                 </li>
                 <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#faculty--staff-tab-3">Mathematics</button>
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#faculty--staff-tab-3">Science</button>
                 </li>
                 <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#faculty--staff-tab-4">Science</button>
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#faculty--staff-tab-4">Social Studies</button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#faculty--staff-tab-5">Kiswahili</button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#faculty--staff-tab-6">French</button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#faculty--staff-tab-7">ICT</button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#faculty--staff-tab-8">Arts</button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#faculty--staff-tab-9">Religious Education</button>
                 </li>
               </ul>
             </div>
@@ -131,27 +150,173 @@
 
           <div class="col-lg-9" data-aos="fade-up" data-aos-delay="400">
             <div class="tab-content">
-
+              <!-- English Tab -->
               <div class="tab-pane fade show active" id="faculty--staff-tab-1">
                 <div class="department-info mb-4">
-                  <h3>French</h3>
-                  <p>Our French program is designed to introduce and develop language skills for students in Grades 1-9, focusing on communication, reading, and writing in a fun and interactive way.</p>
+                  <h3>English</h3>
+                  <p>Our English program focuses on developing strong reading, writing, speaking, and listening skills for students in Grades 1-9, preparing them for academic success.</p>
                 </div>
                 <div class="row g-4">
                   <div class="col-md-6 col-lg-4">
                     <div class="faculty-card">
                       <div class="faculty-image">
-                        <img src="assets/img/education/tutor2.jpg" class="img-fluid" alt="Tutor Edith Evelyne">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2" class="img-fluid" alt="Sarah Johnson">
                       </div>
                       <div class="faculty-info">
-                        <h4>Edith Evelyne</h4>
+                        <h4>Sarah Johnson</h4>
+                        <p class="faculty-title">English Tutor</p>
+                        <div class="faculty-specialties">
+                          <span>Language Arts</span>
+                          <span>Literature</span>
+                          <span>Grades 1-9</span>
+                        </div>
+                        <div class="faculty-contact">
+                          <a href="mailto:edithevelyne77gmail.com"><i class="bi bi-envelope"></i> Email</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mathematics Tab -->
+              <div class="tab-pane fade" id="faculty--staff-tab-2">
+                <div class="department-info mb-4">
+                  <h3>Mathematics</h3>
+                  <p>We offer a comprehensive mathematics curriculum for Grades 1-9, focusing on building strong foundational skills and problem-solving abilities.</p>
+                </div>
+                <div class="row g-4">
+                  <div class="col-md-6 col-lg-4">
+                    <div class="faculty-card">
+                      <div class="faculty-image">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a" class="img-fluid" alt="David Chen">
+                      </div>
+                      <div class="faculty-info">
+                        <h4>David Chen</h4>
+                        <p class="faculty-title">Mathematics Tutor</p>
+                        <div class="faculty-specialties">
+                          <span>Mathematics</span>
+                          <span>Problem Solving</span>
+                          <span>Grades 1-9</span>
+                        </div>
+                        <div class="faculty-contact">
+                          <a href="mailto:edithevelyne77gmail.com"><i class="bi bi-envelope"></i> Email</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Science Tab -->
+              <div class="tab-pane fade" id="faculty--staff-tab-3">
+                <div class="department-info mb-4">
+                  <h3>Science</h3>
+                  <p>Our science program covers biology, chemistry, and physics for Grades 1-9, encouraging hands-on exploration and scientific thinking.</p>
+                </div>
+                <div class="row g-4">
+                  <div class="col-md-6 col-lg-4">
+                    <div class="faculty-card">
+                      <div class="faculty-image">
+                        <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd" class="img-fluid" alt="Maria Rodriguez">
+                      </div>
+                      <div class="faculty-info">
+                        <h4>Maria Rodriguez</h4>
+                        <p class="faculty-title">Science Tutor</p>
+                        <div class="faculty-specialties">
+                          <span>General Science</span>
+                          <span>Lab Skills</span>
+                          <span>Grades 1-9</span>
+                        </div>
+                        <div class="faculty-contact">
+                          <a href="mailto:edithevelyne77gmail.com"><i class="bi bi-envelope"></i> Email</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Social Studies Tab -->
+              <div class="tab-pane fade" id="faculty--staff-tab-4">
+                <div class="department-info mb-4">
+                  <h3>Social Studies</h3>
+                  <p>Our social studies program helps students understand history, geography, and civics, developing global awareness and critical thinking skills.</p>
+                </div>
+                <div class="row g-4">
+                  <div class="col-md-6 col-lg-4">
+                    <div class="faculty-card">
+                      <div class="faculty-image">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" class="img-fluid" alt="James Wilson">
+                      </div>
+                      <div class="faculty-info">
+                        <h4>James Wilson</h4>
+                        <p class="faculty-title">Social Studies Tutor</p>
+                        <div class="faculty-specialties">
+                          <span>History</span>
+                          <span>Geography</span>
+                          <span>Grades 1-9</span>
+                        </div>
+                        <div class="faculty-contact">
+                          <a href="mailto:edithevelyne77gmail.com"><i class="bi bi-envelope"></i> Email</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Kiswahili Tab -->
+              <div class="tab-pane fade" id="faculty--staff-tab-5">
+                <div class="department-info mb-4">
+                  <h3>Kiswahili</h3>
+                  <p>Our Kiswahili program develops language proficiency and cultural understanding for students in Grades 1-9.</p>
+                </div>
+                <div class="row g-4">
+                  <div class="col-md-6 col-lg-4">
+                    <div class="faculty-card">
+                      <div class="faculty-image">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956" class="img-fluid" alt="Amina Hassan">
+                      </div>
+                      <div class="faculty-info">
+                        <h4>Amina Hassan</h4>
+                        <p class="faculty-title">Kiswahili Tutor</p>
+                        <div class="faculty-specialties">
+                          <span>Kiswahili Language</span>
+                          <span>Cultural Studies</span>
+                          <span>Grades 1-9</span>
+                        </div>
+                        <div class="faculty-contact">
+                          <a href="mailto:edithevelyne77gmail.com"><i class="bi bi-envelope"></i> Email</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- French Tab -->
+              <div class="tab-pane fade" id="faculty--staff-tab-6">
+                <div class="department-info mb-4">
+                  <h3>French</h3>
+                  <p>Our French program focuses on developing language skills and cultural appreciation for students in Grades 1-9.</p>
+                </div>
+                <div class="row g-4">
+                  <div class="col-md-6 col-lg-4">
+                    <div class="faculty-card">
+                      <div class="faculty-image">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" class="img-fluid" alt="Sophie Martin">
+                      </div>
+                      <div class="faculty-info">
+                        <h4>Sophie Martin</h4>
                         <p class="faculty-title">French Tutor</p>
                         <div class="faculty-specialties">
                           <span>French Language</span>
+                          <span>Cultural Studies</span>
                           <span>Grades 1-9</span>
                         </div>
                         <div class="faculty-contact">
-                          <a href="mailto:edith.evelyne@example.com"><i class="bi bi-envelope"></i> Email</a>
+                          <a href="mailto:edithevelyne77gmail.com"><i class="bi bi-envelope"></i> Email</a>
                         </div>
                       </div>
                     </div>
@@ -159,27 +324,28 @@
                 </div>
               </div>
 
-              <div class="tab-pane fade" id="faculty--staff-tab-2">
+              <!-- ICT Tab -->
+              <div class="tab-pane fade" id="faculty--staff-tab-7">
                 <div class="department-info mb-4">
-                  <h3>ICT</h3>
-                  <p>Our ICT lessons help students build digital literacy, coding, and computer skills, preparing them for the modern world. We use practical, hands-on approaches for Grades 1-9.</p>
+                  <h3>Information & Communication Technology</h3>
+                  <p>Our ICT program equips students with essential digital skills and computer literacy for the modern world.</p>
                 </div>
                 <div class="row g-4">
                   <div class="col-md-6 col-lg-4">
                     <div class="faculty-card">
                       <div class="faculty-image">
-                        <img src="assets/img/education/tutor3.jpg" class="img-fluid" alt="Tutor Ramla Ali">
+                        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5" class="img-fluid" alt="David Chen">
                       </div>
                       <div class="faculty-info">
-                        <h4>Ramla Ali</h4>
+                        <h4>David Chen</h4>
                         <p class="faculty-title">ICT Tutor</p>
                         <div class="faculty-specialties">
-                          <span>ICT</span>
-                          <span>Digital Skills</span>
+                          <span>Computer Science</span>
+                          <span>Digital Literacy</span>
                           <span>Grades 1-9</span>
                         </div>
                         <div class="faculty-contact">
-                          <a href="mailto:ramla.ali@example.com"><i class="bi bi-envelope"></i> Email</a>
+                          <a href="mailto:edithevelyne77gmail.com"><i class="bi bi-envelope"></i> Email</a>
                         </div>
                       </div>
                     </div>
@@ -187,44 +353,28 @@
                 </div>
               </div>
 
-              <div class="tab-pane fade" id="faculty--staff-tab-3">
+              <!-- Arts Tab -->
+              <div class="tab-pane fade" id="faculty--staff-tab-8">
                 <div class="department-info mb-4">
-                  <h3>Mathematics</h3>
-                  <p>We offer a comprehensive mathematics curriculum for Grades 1-9, focusing on building strong foundational skills and problem-solving abilities for every learner.</p>
+                  <h3>Arts</h3>
+                  <p>Our Arts program nurtures creativity and artistic expression through various mediums and techniques.</p>
                 </div>
                 <div class="row g-4">
                   <div class="col-md-6 col-lg-4">
                     <div class="faculty-card">
                       <div class="faculty-image">
-                        <img src="assets/img/education/tutor2.jpg" class="img-fluid" alt="Math Tutor">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" class="img-fluid" alt="Emma Thompson">
                       </div>
                       <div class="faculty-info">
-                        <h4>Edith Evelyne</h4>
-                        <p class="faculty-title">Mathematics Tutor</p>
+                        <h4>Emma Thompson</h4>
+                        <p class="faculty-title">Arts Tutor</p>
                         <div class="faculty-specialties">
-                          <span>Mathematics</span>
+                          <span>Visual Arts</span>
+                          <span>Creative Expression</span>
                           <span>Grades 1-9</span>
                         </div>
                         <div class="faculty-contact">
-                          <a href="mailto:edithevelyne77@gmail.com"><i class="bi bi-envelope"></i> Email</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-lg-4">
-                    <div class="faculty-card">
-                      <div class="faculty-image">
-                        <img src="assets/img/education/tutor3.jpg" class="img-fluid" alt="Math Tutor">
-                      </div>
-                      <div class="faculty-info">
-                        <h4>Ramla Ali</h4>
-                        <p class="faculty-title">Mathematics Tutor</p>
-                        <div class="faculty-specialties">
-                          <span>Mathematics</span>
-                          <span>Grades 1-9</span>
-                        </div>
-                        <div class="faculty-contact">
-                          <a href="mailto:ramla.ali@example.com"><i class="bi bi-envelope"></i> Email</a>
+                          <a href="mailto:edithevelyne77gmail.com"><i class="bi bi-envelope"></i> Email</a>
                         </div>
                       </div>
                     </div>
@@ -232,44 +382,28 @@
                 </div>
               </div>
 
-              <div class="tab-pane fade" id="faculty--staff-tab-4">
+              <!-- Religious Studies Tab -->
+              <div class="tab-pane fade" id="faculty--staff-tab-9">
                 <div class="department-info mb-4">
-                  <h3>Science</h3>
-                  <p>Our science program covers key topics in biology, chemistry, and physics for Grades 1-9, encouraging curiosity and hands-on exploration.</p>
+                  <h3>Religious Studies</h3>
+                  <p>Our Religious Studies program promotes understanding and respect for different faiths and beliefs.</p>
                 </div>
                 <div class="row g-4">
                   <div class="col-md-6 col-lg-4">
                     <div class="faculty-card">
                       <div class="faculty-image">
-                        <img src="assets/img/education/tutor2.jpg" class="img-fluid" alt="Science Tutor">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" class="img-fluid" alt="Father Michael">
                       </div>
                       <div class="faculty-info">
-                        <h4>Edith Evelyne</h4>
-                        <p class="faculty-title">Science Tutor</p>
+                        <h4>Father Michael</h4>
+                        <p class="faculty-title">Religious Studies Tutor</p>
                         <div class="faculty-specialties">
-                          <span>General Science</span>
+                          <span>Religious Education</span>
+                          <span>Ethics</span>
                           <span>Grades 1-9</span>
                         </div>
                         <div class="faculty-contact">
-                          <a href="mailto:edith.evelyne@example.com"><i class="bi bi-envelope"></i> Email</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-lg-4">
-                    <div class="faculty-card">
-                      <div class="faculty-image">
-                        <img src="assets/img/education/tutor3.jpg" class="img-fluid" alt="Science Tutor">
-                      </div>
-                      <div class="faculty-info">
-                        <h4>Ramla Ali</h4>
-                        <p class="faculty-title">Science Tutor</p>
-                        <div class="faculty-specialties">
-                          <span>General Science</span>
-                          <span>Grades 1-9</span>
-                        </div>
-                        <div class="faculty-contact">
-                          <a href="mailto:ramla.ali@example.com"><i class="bi bi-envelope"></i> Email</a>
+                          <a href="mailto:edithevelyne77gmail.com"><i class="bi bi-envelope"></i> Email</a>
                         </div>
                       </div>
                     </div>
@@ -354,9 +488,9 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Best ED Homeschool</strong> <span>All Rights Reserved</span></p>
+      <p><strong class="px-1 sitename">Best ED Homeschool</strong></p>
       <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        By <a href="https://mansur-akidah.vercel.app">Mansur</a>
       </div>
     </div>
 
